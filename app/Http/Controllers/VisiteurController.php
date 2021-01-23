@@ -16,19 +16,19 @@ class VisiteurController extends Controller
      * @return \Illuminate\Http\Response
      */
     
-    public function index()
+    public function index(\Illuminate\Http\Request $request)
     {
 
         //Recuperation IP visiteur
-        $RequestIp = Request::HEADER_X_FORWARDED_FOR;
+        $RequestIp = $request->header();
         //Recuperation Date visite
         $dateTime = Carbon::now('+01:00')->format('d/m/Y H:i:s');
         
-        $visite = new Admin();
+        /*$visite = new Admin();
         $visite->ip = $RequestIp;
         $visite->dateTime = $dateTime;
         
-        $visite->save();
+        $visite->save();*/
 
         return view('welcome',['RequestIp' => $RequestIp]);
         
