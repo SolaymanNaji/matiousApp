@@ -17,7 +17,7 @@
     
     <br>
     <br>
-    <div align='center'><h1 style="color: honeydew">Bienvenue, votre adresse IP est : {{ $RequestIp["x-forwarded-for"][0] }} </h1></div>
+    <div align='center'><h1 style="color: honeydew">Bienvenue, votre adresse IP est : {{ $RequestIp}} </h1></div>
     
 </body>
 </html>

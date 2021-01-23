@@ -24,13 +24,13 @@ class VisiteurController extends Controller
         //Recuperation Date visite
         $dateTime = Carbon::now('+01:00')->format('d/m/Y H:i:s');
         
-        /*$visite = new Admin();
-        $visite->ip = $RequestIp;
+        $visite = new Admin();
+        $visite->ip = $RequestIp["x-forwarded-for"][0];
         $visite->dateTime = $dateTime;
         
-        $visite->save();*/
+        $visite->save();
 
-        return view('welcome',['RequestIp' => $RequestIp]);
+        return view('welcome',['RequestIp' => $RequestIp["x-forwarded-for"][0]]);
         
 
     }
