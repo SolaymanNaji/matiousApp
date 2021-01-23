@@ -16,11 +16,11 @@ class VisiteurController extends Controller
      * @return \Illuminate\Http\Response
      */
     
-    public function index(\Illuminate\Http\Request $request)
+    public function index()
     {
 
         //Recuperation IP visiteur
-        $RequestIp = $request->header('x-forworded-for');
+        $RequestIp = Request::HEADER_X_FORWARDED_FOR;
         //Recuperation Date visite
         $dateTime = Carbon::now('+01:00')->format('d/m/Y H:i:s');
         
