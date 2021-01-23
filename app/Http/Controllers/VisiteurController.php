@@ -7,6 +7,7 @@ use Carbon\Carbon;
 use Request;
 
 
+
 class VisiteurController extends Controller
 {
     /**
@@ -14,10 +15,12 @@ class VisiteurController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    
+    public function index(\Illuminate\Http\Request $request)
     {
-        //Recuperation IP
-        $RequestIp = Request::ip();
+
+        //Recuperation IP visiteur
+        $RequestIp = $request->header();
         //Recuperation Date visite
         $dateTime = Carbon::now('+01:00')->format('d/m/Y H:i:s');
         
