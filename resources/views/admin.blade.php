@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Welcome Vesiteur</title>
+    <title>Admin page</title>
 </head>
 <body style="background-color: rgb(218, 216, 216); color:rgb(80, 88, 80)">
     <br>
