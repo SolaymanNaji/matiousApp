@@ -17,7 +17,7 @@
     
     <br>
     <br>
-    <div align='center'><h1 style="color: honeydew">Bienvenue, votre adresse IP est : {{ var_dump($RequestIp[4]) }} </h1></div>
+    <div align='center'><h1 style="color: honeydew">Bienvenue, votre adresse IP est : {{ var_dump($RequestIp) }} </h1></div>
     
 </body>
 </html>
