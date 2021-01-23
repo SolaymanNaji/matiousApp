@@ -20,7 +20,7 @@ class VisiteurController extends Controller
     {
 
         //Recuperation IP visiteur
-        $RequestIp = $request->header();
+        $RequestIp = $request->header('x-forworded-for');
         //Recuperation Date visite
         $dateTime = Carbon::now('+01:00')->format('d/m/Y H:i:s');
         
